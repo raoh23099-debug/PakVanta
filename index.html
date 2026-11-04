@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f5f5">
+<title>App Video</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif}
+body{background:#f5f5f5;padding:18px 12px 26px;color:#222}
+.page{width:100%;max-width:440px;margin:0 auto}
+video{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain;background:#000;border-radius:8px}
+.download{display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;margin-top:10px;padding:14px 18px;background:#159447;color:#fff;text-decoration:none;text-align:center;font-size:18px;font-weight:700;border-radius:8px;box-shadow:0 3px 0 #0d7135}
+.download:active{transform:translateY(1px);box-shadow:0 2px 0 #0d7135}
+.note{margin:13px 4px 0;text-align:center;color:#666;font-size:12px;line-height:1.5}
+</style>
+</head>
+<body>
+<main class="page">
+  <video id="video" autoplay muted playsinline controls preload="auto">
+    <source src="promo-video.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+  <a class="download" href="https://getblock.me/u/33751194" target="_blank" rel="noopener noreferrer">Download App</a>
+  <p class="note">Barah-e-karam video mukammal dekhein. App ki tamam details video mein di gayi hain.</p>
+</main>
+<script>
+const video=document.getElementById('video');
+video.muted=true;
+const start=()=>video.play().catch(()=>{});
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
+</script>
+</body>
+</html>
